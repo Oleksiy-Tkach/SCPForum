@@ -1,0 +1,293 @@
+/* Основні стилі */
+body {
+  font-family: 'Courier New', monospace;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../images/scp-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  background-color: rgba(10, 10, 10, 0.9);
+  border: 2px solid #c00;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(200, 0, 0, 0.5);
+  overflow: hidden;
+  margin: 20px;
+}
+
+.login-header {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(20, 20, 20, 0.8);
+  border-bottom: 1px solid #c00;
+}
+
+.scp-logo img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: #c00;
+  font-size: 24px;
+  margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 14px;
+  margin: 5px 0 0;
+}
+
+.login-form-container {
+  padding: 25px;
+}
+
+/* Стилі форми */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #c00;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+label i {
+  margin-right: 8px;
+  width: 16px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 3px;
+  color: #e0e0e0;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #c00;
+  box-shadow: 0 0 5px rgba(200, 0, 0, 0.5);
+}
+
+.password-input {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #777;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.toggle-password:hover {
+  color: #c00;
+}
+
+/* Опції форми */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.remember-me input {
+  margin-right: 8px;
+}
+
+.forgot-password {
+  color: #c00;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Кнопка входу */
+.login-btn {
+  background-color: #c00;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 20px;
+}
+
+.login-btn:hover {
+  background-color: #a00;
+}
+
+.login-btn i {
+  margin-right: 8px;
+}
+
+/* Футер форми */
+.form-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+.register-link {
+  color: #c00;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* Повідомлення безпеки */
+.security-notice {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: rgba(20, 20, 20, 0.8);
+  border: 1px solid #333;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.security-notice p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.security-notice i {
+  margin-right: 8px;
+  color: #c00;
+}
+
+.warning {
+  color: #c00;
+  font-weight: bold;
+}
+
+/* Рівень безпеки */
+.clearance-level {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(20, 20, 20, 0.8);
+  border-top: 1px solid #333;
+  text-align: center;
+}
+
+.level-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #111;
+  border-radius: 5px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.level-progress {
+  height: 100%;
+  width: 0;
+  background-color: #c00;
+  transition: width 1s;
+}
+
+.clearance-level p {
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+/* Сповіщення */
+.scp-alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(200, 0, 0, 0.9);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  display: none;
+  z-index: 1000;
+  animation: alertPulse 2s infinite;
+}
+
+.alert-content {
+  display: flex;
+  align-items: center;
+}
+
+.alert-content i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+@keyframes alertPulse {
+  0% { box-shadow: 0 0 5px rgba(200, 0, 0, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(200, 0, 0, 0.8); }
+  100% { box-shadow: 0 0 5px rgba(200, 0, 0, 0.5); }
+}
+
+/* Адаптивність */
+@media (max-width: 480px) {
+  .login-container {
+    margin: 10px;
+    border-radius: 0;
+  }
+  
+  .login-header {
+    padding: 15px;
+  }
+  
+  .login-form-container {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,388 @@
+/* animations.css */
+/* Анімації та ефекти для SCP Foundation */
+
+/* Загальні анімації */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Анімації для завантажувального екрану */
+.scp-logo-animation .circle {
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+.scp-logo-animation .circle:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.scp-logo-animation .circle:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.progress {
+  animation: progress 3s ease-in-out infinite;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Анімації для навігації */
+.nav-link {
+  transition: all 0.3s ease;
+}
+
+.nav-link::before {
+  animation: linkShimmer 3s infinite;
+}
+
+@keyframes linkShimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Анімації для карток */
+.quick-card {
+  transition: all 0.3s ease;
+}
+
+.quick-card:hover {
+  animation: cardHover 0.5s forwards;
+}
+
+@keyframes cardHover {
+  to {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Анімації для каруселі */
+.featured-item {
+  animation: fadeIn 0.8s ease;
+}
+
+.featured-item.active {
+  animation: slideInFromRight 0.8s ease;
+}
+
+/* Анімації для кнопок */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  animation: buttonPulse 0.5s forwards;
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Анімації для іконок */
+.card-icon {
+  transition: all 0.3s ease;
+}
+
+.quick-card:hover .card-icon {
+  animation: iconBounce 0.6s forwards;
+}
+
+@keyframes iconBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Анімації для секретної зони */
+.secret-zone {
+  animation: zonePulse 3s infinite alternate;
+}
+
+@keyframes zonePulse {
+  from {
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.2);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(231, 76, 60, 0.4);
+  }
+}
+
+.lock-icon {
+  animation: lockShake 5s infinite;
+}
+
+@keyframes lockShake {
+  0%, 90%, 100% {
+    transform: rotate(0);
+  }
+  92% {
+    transform: rotate(10deg);
+  }
+  94% {
+    transform: rotate(-10deg);
+  }
+  96% {
+    transform: rotate(10deg);
+  }
+  98% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* Анімації для модальних вікон */
+.modal-content {
+  animation: modalAppear 0.4s ease;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Анімації для пошуку */
+.search-box:focus-within {
+  animation: searchFocus 0.5s forwards;
+}
+
+@keyframes searchFocus {
+  to {
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.3);
+    border-color: var(--primary);
+  }
+}
+
+/* Анімації для сповіщень */
+.notification-item {
+  animation: notificationSlideIn 0.5s ease;
+}
+
+@keyframes notificationSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Анімації для живого ефіру */
+.live-feed-item {
+  animation: feedItemAppear 0.6s ease;
+}
+
+@keyframes feedItemAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Анімації для статусів */
+.stat-item {
+  animation: statCountUp 1s ease-out;
+}
+
+@keyframes statCountUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Спеціальні анімації для SCP */
+.scp-alert {
+  animation: alertEmergency 0.8s infinite alternate;
+}
+
+@keyframes alertEmergency {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+.object-class-badge {
+  animation: badgeGlow 2s infinite alternate;
+}
+
+@keyframes badgeGlow {
+  from {
+    box-shadow: 0 0 5px currentColor;
+  }
+  to {
+    box-shadow: 0 0 15px currentColor;
+  }
+}
+
+/* Анімації для темної теми */
+body.dark-mode .nav-link::before {
+  animation: darkLinkShimmer 4s infinite;
+}
+
+@keyframes darkLinkShimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Оптимізації анімацій */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,154 @@
+/* dark-mode.css */
+/* Стилі для темної теми SCP Foundation */
+
+body.dark-mode {
+  background-color: #0d0d0d;
+  color: #d9d9d9;
+}
+
+body.dark-mode .header-top {
+  background: linear-gradient(to bottom, #050505, #0a0a0a);
+}
+
+body.dark-mode .main-nav {
+  background-color: #151515;
+  border-top: 1px solid #2a2a2a;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+body.dark-mode .quick-card,
+body.dark-mode .sidebar-widget,
+body.dark-mode .featured-content,
+body.dark-mode .news-section,
+body.dark-mode .scp-result,
+body.dark-mode .live-feed-section {
+  background: #151515;
+  border: 1px solid #2a2a2a;
+}
+
+body.dark-mode #searchInput,
+body.dark-mode .form-group input,
+body.dark-mode .form-group select {
+  background: #1a1a1a;
+  color: #d9d9d9;
+  border: 1px solid #2a2a2a;
+}
+
+body.dark-mode .modal-content {
+  background: #151515;
+  border: 1px solid #2a2a2a;
+}
+
+body.dark-mode .notification-item {
+  background: #1a1a1a;
+}
+
+body.dark-mode .live-feed-item {
+  background: #1a1a1a;
+}
+
+body.dark-mode .social-links a {
+  background: #1a1a1a;
+}
+
+body.dark-mode .social-links a:hover {
+  background: #252525;
+}
+
+body.dark-mode .nav-link {
+  color: #d9d9d9;
+}
+
+body.dark-mode .nav-link:hover {
+  background-color: #1a1a1a;
+  color: var(--primary);
+}
+
+body.dark-mode .nav-link.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+body.dark-mode .stats-grid .stat-item {
+  background: #1a1a1a;
+}
+
+body.dark-mode .scp-image {
+  background: #1a1a1a;
+}
+
+body.dark-mode .achievement-item.unlocked {
+  background: rgba(46, 204, 113, 0.15);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+body.dark-mode .achievement-item.locked {
+  background: rgba(149, 165, 166, 0.1);
+  border: 1px solid rgba(149, 165, 166, 0.2);
+}
+
+body.dark-mode .footer-col a {
+  color: #a0a0a0;
+}
+
+body.dark-mode .footer-col a:hover {
+  color: var(--primary);
+}
+
+body.dark-mode .welcome-section p,
+body.dark-mode .quick-card p,
+body.dark-mode .featured-details p,
+body.dark-mode .news-item p,
+body.dark-mode .feed-time,
+body.dark-mode .notification-time,
+body.dark-mode .stat-label,
+body.dark-mode .scp-details p,
+body.dark-mode .secret-zone p,
+body.dark-mode .o5-item p,
+body.dark-mode .modal-footer,
+body.dark-mode .disclaimer {
+  color: #a0a0a0;
+}
+
+body.dark-mode .progress-bar {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .search-btn {
+  background: #1a1a1a;
+  color: #d9d9d9;
+}
+
+body.dark-mode .search-btn:hover {
+  background: var(--primary);
+}
+
+body.dark-mode .theme-toggle button:hover {
+  background: #1a1a1a;
+}
+
+/* Спеціальні ефекти для темної теми */
+body.dark-mode .header-logo h1 {
+  text-shadow: 0 0 15px rgba(231, 76, 60, 0.7);
+}
+
+body.dark-mode .secret-zone {
+  background: linear-gradient(to bottom, #0a0a0a, #050505);
+  border: 2px dashed var(--primary);
+  box-shadow: 0 0 20px rgba(231, 76, 60, 0.1);
+}
+
+body.dark-mode .scp-alert {
+  background: linear-gradient(to right, #600000, #a62c1d);
+}
+
+/* Адаптація темної теми для мобільних пристроїв */
+@media (max-width: 768px) {
+  body.dark-mode .nav-list {
+    background: #151515;
+  }
+  
+  body.dark-mode .nav-link {
+    border-bottom: 1px solid #2a2a2a;
+  }
+}
